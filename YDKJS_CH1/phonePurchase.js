@@ -1,7 +1,7 @@
 /*
-The following clarifications and reservations are what I've seen from the specifications in the phonePurchase project in chaper 1 of YDKJS - Up and Going
+The following clarifications and reservations are what I've seen from the specifications in the phonePurchase project in chapter 1 of YDKJS - Up and Going
 
-1) It is okay to go over the SPENDING_THRESHOLD value in order to buy an additional phone, while one shouldn't go over it because of wanting to buy an additional accessory. let's agree that we can go on to buy the additional accessory irrespective of if adding its tax would make us go over the SPENDING_THRESHOLD. Of course, as said in #3, we also can't buy the additional accessory if adding its taxedAccessoryPrice to total amount would be more than bankBalance.
+1) It is okay to go over the SPENDING_THRESHOLD value in order to buy an additional phone, while one shouldn't go over it because of wanting to buy an additional accessory. Let's agree that we can go on to buy the additional accessory irrespective of if adding its tax would make us go over the SPENDING_THRESHOLD. Of course, as said in #3, we also can't buy the additional accessory if adding its taxedAccessoryPrice to total amount would be more than bankBalance.
 
 2) The stage at which the tax is being computed isn't right to me in his specification and solution, simply because it would have meant us having to do unnecessary back and forth in the case of the possibility that after only comparing our purchaseAmount to bankBalance in order to decide how many phones and accessories we can buy, we then get to a dead end by seeing that the finalPurchaseAmount (after adding tax to purchaseAmount) is more than the bankBalance, as that would mean that we can't end up buying up to the number of phones that we've computed that we can buy, and saying the client can't afford that is ambiguous and misleading, because he can definitely afford some of that.
 
@@ -19,7 +19,6 @@ const SPENDING_THRESHOLD = 250;
 const TAX_RATE = 0.08;
 
 var bankBalance = Number(prompt("What is your Bank Balance?"));
-alert(typeof bankBalance);
 var amount = 0;
 var noOfPhones = 0;
 var noOfAccessories = 0;
