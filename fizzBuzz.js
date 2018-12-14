@@ -1,6 +1,6 @@
 const fizzBuzz = function () {
   let x = 1;
-	let output = "";
+  let output = "";
   while (x <= 100) {
     // checking divisibility
     let display = (x % 3) === 0 && (x % 5) !== 0 ? "Fizz \n" :
@@ -12,6 +12,6 @@ const fizzBuzz = function () {
     // increment x
     x += 1;
   }
-	console.log(output);
-	return output;
+  console.log(output);
+  return output;
 }();
